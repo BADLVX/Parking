@@ -1,0 +1,7 @@
+Utilisateur : IdUser, NumPlaceAtt, MdpUser, EmailUser, NomUser, PrénomUser, StatutUser
+FAIRE,  11 Réservation, 0N Utilisateur
+Réservation : IdReservation, DateFin, DateAttri
+
+:
+Place : NumPlace
+CONCERNER, 11 Réservation, 0N Place
