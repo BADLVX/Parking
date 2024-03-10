@@ -13,9 +13,14 @@ class Reservation extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('Reservations', function(Blueprint $table) {
+            $table->integer('Id');
+            $table->integer('IdUser');
+            $table->integer('NumPlace');
+            $table->date('DateFin');
+            $table->date('DateAttribution');
+        });
     }
-
     /**
      * Reverse the migrations.
      *
@@ -23,6 +28,6 @@ class Reservation extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('Reservations');
     }
 }
