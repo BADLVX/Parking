@@ -15,7 +15,7 @@ class Place extends Migration
     {
         Schema::create('Places', function(Blueprint $table) {
             $table->integer('Id');
-            $table->string('StatutPlace', 20)
+            $table->string('StatutPlace', 20);
         });
     }
 
