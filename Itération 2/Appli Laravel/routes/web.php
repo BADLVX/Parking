@@ -14,11 +14,30 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('ParkingAccueil');
+
+    $utilisateur = new \App\Models\utilisateur();
+    $utilisateur-> nomUser = 'Mezaoui';
+    $utilisateur -> prenomUser = 'Sofiane';
+    $utilisateur -> save();
+
+    return $utilisateur;
 });
 
 Route::get('/Acceuil', function () {
     return view('ParkingAccueil');
+});
+
+Route::get('/EtatReservation', function () {
+    return view('etatreservation');
+});
+
+Route::get('/AncienneReservation', function () {
+    return view('anciennereservation');
+});
+
+Route::get('/Reserver', function () {
+    return view('reserver');
 });
 
 

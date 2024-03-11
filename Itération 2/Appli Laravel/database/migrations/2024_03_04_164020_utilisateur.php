@@ -13,7 +13,7 @@ class Utilisateur extends Migration
      */
     public function up()
     {
-        Schema::create('Utilisateur', function(Blueprint $table) {
+        Schema::create('Utilisateurs', function(Blueprint $table) {
             $table->integer('Id');
             $table->integer('NumPlaceAtt');
             $table->string('MdpUser', 50);
@@ -31,6 +31,6 @@ class Utilisateur extends Migration
      */
     public function down()
     {
-        Schema::drop('Utilisateur');
+        Schema::drop('Utilisateurs');
     }
 }
