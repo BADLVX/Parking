@@ -14,11 +14,31 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('ParkingAccueil');
+
+    $utilisateur = new \App\Models\utilisateur();
+    $utilisateur-> nomUser = 'Mezaoui';
+    $utilisateur -> prenomUser = 'Sofiane';
+    $utilisateur -> save();
+
+    return $utilisateur;
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+Route::get('/Acceuil', function () {
+    return view('ParkingAccueil');
+});
 
-require __DIR__.'/auth.php';
+Route::get('/EtatReservation', function () {
+    return view('etatreservation');
+});
+
+Route::get('/AncienneReservation', function () {
+    return view('anciennereservation');
+});
+
+Route::get('/Reserver', function () {
+    return view('reserver');
+});
+
+
+
