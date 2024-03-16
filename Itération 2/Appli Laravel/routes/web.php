@@ -13,12 +13,26 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
-});
+});*/
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+Route::get('/', function () { // renvoie la vue apres l'authentification du middleware
+    return view('ParkingAccueil');
+})->middleware(['auth'])->name('dashboard'); //Authentification dans la vue dashboard
 
 require __DIR__.'/auth.php';
+
+Route::get('/reserver', function () {
+    return view('/reserver');
+});
+
+Route::get('/etatreservation', function () {
+    return view('/etatreservation');
+});
+
+Route::get('/anciennereservation', function () {
+    return view('/anciennereservation');
+});
+
+
