@@ -24,15 +24,15 @@ Route::get('/', function () { // renvoie la vue apres l'authentification du midd
 require __DIR__.'/auth.php';
 
 Route::get('/reserver', function () {
-    return view('/reserver');
+    return view('reserver');
 });
 
 Route::get('/etatreservation', function () {
-    return view('/etatreservation');
+    return view('etatreservation');
 });
 
 Route::get('/anciennereservation', function () {
-    return view('/anciennereservation');
+    return view('anciennereservation');
 });
 
 
