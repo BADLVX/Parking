@@ -8,16 +8,15 @@
     <table>
         <thead>
             <tr>
-                <th>Date de début</th>
-                <th>Date de fin</th>
-                <th>Numéro de place</th>
+                <th>Id</th>
+                <th>Statut Place</th>
             </tr>
         </thead>
         <tbody>
-            @foreach ($places as $place)
+            @foreach ($reservations as $reservations)
                 <tr>
-                    <td>{{ $place->id }}</td>
-                    <td>{{ $place->statut_place }}</td>
+                    <td>{{ $reservations->Id }}</td>
+                    <td>{{ $reservations->StatutPlace }}</td>
                 </tr>
             @endforeach
         </tbody>
