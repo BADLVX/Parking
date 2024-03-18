@@ -13,6 +13,13 @@
                 <th>Numéro de place</th>
             </tr>
         </thead>
-       
+        <tbody>
+            @foreach ($places as $place)
+                <tr>
+                    <td>{{ $place->id }}</td>
+                    <td>{{ $place->statut_place }}</td>
+                </tr>
+            @endforeach
+        </tbody>
 </body>
 </html>
