@@ -42,6 +42,6 @@ Route::get('/anciennereservation', function () {
 
 use App\Http\Controllers\ReservationController;
 
-Route::get('/reservation', [ReservationController::class, 'show'])->name('confirmation');
+Route::get('/reservations', [ReservationController::class, 'index'])->name('reservations.index');
 
 

@@ -13,15 +13,6 @@
                 <th>Numéro de place</th>
             </tr>
         </thead>
-        <tbody>
-            @foreach ($reservations as $reservation)
-            <tr>
-                <td>{{ $reservation->date_debut }}</td>
-                <td>{{ $reservation->date_fin }}</td>
-                <td>{{ $reservation->num_place }}</td>
-            </tr>
-            @endforeach
-        </tbody>
-    </table>
+       
 </body>
 </html>

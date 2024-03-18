@@ -63,25 +63,9 @@
             <a href="{{  route('anciennereservation') } }" id = "anciennereservation">Ancienne Reservation</a>-->
 
    <div class = "buttonposition">
-
-    <form action="{{ route('reservation.store') }}" method="POST">
-        @csrf <!-- Ajoutez ceci pour inclure un jeton CSRF -->
-        <label for="date_debut">Date de début :</label>
-        <input type="date" id="date_debut" name="date_debut" required><br>
-
-        <label for="date_fin">Date de fin :</label>
-        <input type="date" id="date_fin" name="date_fin" required><br>
-
-        <!-- Si l'utilisateur est déjà authentifié, vous n'avez pas besoin de ce champ -->
-        <!-- Si vous l'utilisez, assurez-vous que l'utilisateur soit authentifié avant de créer la réservation -->
-        <!-- <input type="hidden" name="id_utilisateur" value="{{ Auth::id() }}"> -->
-
-        <label for="num_place">Numéro de place :</label>
-        <input type="text" id="num_place" name="num_place" required><br>
-
+    <form action = "{{route('reservations.index')}}" method = "GET">
         <button type="submit">Réserver</button>
     </form>
-
     </div>
 
 
