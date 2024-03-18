@@ -7,8 +7,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Place extends Model
 {
     use HasFactory;
-    
-    protected $table = 'places';
+
+    protected $table = 'Places';
     protected $primaryKey = 'Id';
     protected $fillable = [
         'StatutPlace',

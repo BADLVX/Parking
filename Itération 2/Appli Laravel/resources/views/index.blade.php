@@ -9,14 +9,14 @@
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Statut Place</th>
+                <th>Statut</th>
             </tr>
         </thead>
         <tbody>
-            @foreach ($reservations as $reservations)
+            @foreach ($places as $places)
                 <tr>
-                    <td>{{ $reservations->Id }}</td>
-                    <td>{{ $reservations->StatutPlace }}</td>
+                    <td>{{ $places->Id }}</td>
+                    <td>{{ $places->StatutPlace }}</td>
                 </tr>
             @endforeach
         </tbody>

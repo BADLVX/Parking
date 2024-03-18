@@ -9,7 +9,7 @@ class ReservationController extends Controller
 {
     public function index()
     {
-        $reservations = Reservation::all();
-        return view('index',['reservations' => $reservations]);
+        $places = Place::all();
+        return view('index',['places' => $places]);
     }
 }
