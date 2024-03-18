@@ -39,13 +39,9 @@ Route::get('/anciennereservation', function () {
     return view('anciennereservation');
 });
 
-public function index()
-{
-    $reservations = Reservation::all();
-    return view('listeReservation', compact('reservations'));
-}
 
 use App\Http\Controllers\ReservationController;
 
-Route::get('/reservations', [ReservationController::class, 'index'])->name('confirmation');
+Route::get('/reservation', [ReservationController::class, 'show'])->name('confirmation');
+
 
