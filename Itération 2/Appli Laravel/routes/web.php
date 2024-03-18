@@ -39,4 +39,6 @@ Route::get('/anciennereservation', function () {
     return view('anciennereservation');
 });
 
+use App\Http\Controllers\ReservationController;
+Route::post('/reservation', [ReservationController::class, 'store']);
 
