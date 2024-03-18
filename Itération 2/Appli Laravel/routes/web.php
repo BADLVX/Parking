@@ -18,25 +18,25 @@ use Illuminate\Support\Facades\Route;
 });*/
 
 Route::get('/', function () { // renvoie la vue apres l'authentification du middleware
-    return view('ParkingAccueil');
+    return view('parking.accueil');
 })->middleware(['auth'])->name('dashboard'); //Authentification dans la vue dashboard
 
 require __DIR__.'/auth.php';
 
-Route::get('/ParkingAccueil', function () {
-    return view('ParkingAccueil');
+Route::get('/accueil', function () {
+    return view('parking.accueil');
 });
 
 Route::get('/reserver', function () {
-    return view('reserver');
+    return view('parking.reserver');
 });
 
 Route::get('/etatreservation', function () {
-    return view('etatreservation');
+    return view('parking.etatreservation');
 });
 
 Route::get('/anciennereservation', function () {
-    return view('anciennereservation');
+    return view('parking.anciennereservation');
 });
 
 
