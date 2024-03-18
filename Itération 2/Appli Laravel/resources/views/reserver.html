@@ -25,6 +25,17 @@
             background-color: #ddd; /* Couleur de fond au survol */
             color: black; /* Couleur du texte au survol */
         }
+        .buttonposition{
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+        }
+        button{
+                    background-color: rgb(123, 123, 196);
+                    width: 200px;
+                    height: 50px;
+        }
     </style>
 </head>
 <body>
@@ -48,14 +59,10 @@
             <a href="{{  route('etatreservation') } }" id = "etatreservation">Etat Reservation</a>
             <a href="{{  route('anciennereservation') } }" id = "anciennereservation">Ancienne Reservation</a>-->
 
-   <div style = "display:flex;
-                justify-content: center;
-                align-items: center;
-                height: 100vh;">  
+   <div class = "buttonposition">  
                
-  <button style = "background-color: rgb(123, 123, 196);
-                    width: 200px;
-                    height: 50px;">Reserver</button>
+        <button>Reserver</button>
+
     </div>    
 
 
