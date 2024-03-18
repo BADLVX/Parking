@@ -28,7 +28,10 @@ class ReservationController extends Controller
             'num_place' => $request->num_place,
         ]);
 
-        //redirection vers une page de confirmation
-        return redirect()->route('confirmation');
+       
+    }
+    public function show()
+    {
+        return view('listeReservation'); // Assume que vous avez une vue nommée 'confirmation.blade.php'
     }
 }

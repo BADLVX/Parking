@@ -40,5 +40,6 @@ Route::get('/anciennereservation', function () {
 });
 
 use App\Http\Controllers\ReservationController;
-Route::post('/reservation', [ReservationController::class, 'store']);
+
+Route::get('/reservation', [ReservationController::class, 'show'])->name('confirmation');
 
