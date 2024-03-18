@@ -15,8 +15,8 @@ class ReservationController extends Controller
         $request->validate([
             'date_debut' => 'required|date',
             'date_fin' => 'required|date|after:date_debut',
-            'id_user' => 'required|exists:user,iduser',
-            'num_place' => 'required|exists:places, numplace',
+            'id_user' => 'required|exists:User,id',
+            'num_place' => 'required|exists:Places, numplace',
         ]);
 
         //Création de la réservation
