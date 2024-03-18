@@ -23,6 +23,10 @@ Route::get('/', function () { // renvoie la vue apres l'authentification du midd
 
 require __DIR__.'/auth.php';
 
+Route::get('/ParkingAccueil', function () {
+    return view('ParkingAccueil');
+});
+
 Route::get('/reserver', function () {
     return view('reserver');
 });
