@@ -26,6 +26,20 @@
         background-color: #ddd; /* Couleur de fond au survol */
         color: black; /* Couleur du texte au survol */
     }
+    .buttonposition{
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+        }
+        button{
+                    background-color: rgb(123, 123, 196);
+                    width: 200px;
+                    height: 50px;
+        }
+        button:hover{
+                   cursor:pointer;
+        }
 </style>
 <div class = "container">
     @yield('content')

@@ -7,8 +7,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Reservation extends Model
 {
     use HasFactory;
-    
-    protected $table = 'reservations';
+
+    protected $table = 'Reservations';
     protected $primaryKey = 'idReservation';
     protected $fillable = [
         'datefin',
