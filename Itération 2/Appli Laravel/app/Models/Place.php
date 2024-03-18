@@ -9,9 +9,9 @@ class Place extends Model
     use HasFactory;
     
     protected $table = 'places';
-    protected $primaryKey = 'numplace';
+    protected $primaryKey = 'Id';
     protected $fillable = [
-        'numplace',
+        'StatutPlace',
     ];
     // Gerer les timestamps (created at, updated at) on peux les activer ainsi
     //public $timestamps = true;
