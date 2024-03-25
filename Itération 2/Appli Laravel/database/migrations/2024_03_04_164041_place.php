@@ -14,7 +14,7 @@ class Place extends Migration
     public function up()
     {
         Schema::create('Places', function(Blueprint $table) {
-            $table->integer('Id');
+            $table->id();
             $table->string('StatutPlace', 20);
         });
     }
@@ -27,5 +27,5 @@ class Place extends Migration
     public function down()
     {
         Schema::drop('Places');
-    }
+    }   
 }

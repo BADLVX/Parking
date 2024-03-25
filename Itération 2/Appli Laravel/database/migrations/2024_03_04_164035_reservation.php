@@ -13,10 +13,11 @@ class Reservation extends Migration
      */
     public function up()
     {
-        Schema::create('Reservations', function(Blueprint $table) {
-            $table->integer('Id');
-            $table->integer('IdUser');
+        Schema::create('reservations', function(Blueprint $table) {
+            $table->id();
+            $table->foreign('IdUser')->references('id')->on('users');
             $table->integer('NumPlace');
+            $table->foreign('NumPlace')->references('id')->on('Places');
             $table->date('DateFin');
             $table->date('DateAttribution');
         });
