@@ -8,13 +8,7 @@ class Reservation extends Model
 {
     use HasFactory;
 
-    protected $table = 'Reservations';
-    protected $primaryKey = 'idReservation';
-    protected $fillable = [
-        'datefin',
-         'datedebut',
-    
-    ];
-    // Gerer les timestamps (created at, updated at) on peux les activer ainsi
-    //public $timestamps = true;
+//    protected $table = 'Reservations';
+//    protected $primaryKey = 'idReservation';
+    protected $fillable = ['datefin','datedebut'];
 }

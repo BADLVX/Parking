@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+require __DIR__.'/auth.php';
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,14 +21,8 @@ Route::get('/', function () { // renvoie la vue apres l'authentification du midd
     return view('parking.accueil');
 })->middleware(['auth'])->name('dashboard'); //Authentification dans la vue dashboard
 
-require __DIR__.'/auth.php';
-
 Route::get('/accueil', function () {
     return view('parking.accueil');
-});
-
-Route::get('/reserver', function () {
-    return view('parking.reserver');
 });
 
 Route::get('/etatreservation', function () {
@@ -39,9 +33,8 @@ Route::get('/anciennereservation', function () {
     return view('parking.anciennereservation');
 });
 
+Route::get('/reserver', 'ReservationController@store')->name('reservations.store');
 
-use App\Http\Controllers\ReservationController;
 
-Route::get('/reservations', [ReservationController::class, 'index'])->name('reservations.index');
 
 
