@@ -36,6 +36,9 @@ Route::get('/anciennereservation', function () {
 Route::get('/reservero', function () {
     return view('parking.reservero');
 });
+Route::get('/dataReserver', function () {
+    return view('parking.dataReserver');
+});
 //Route::get('/reserver', 'ReservationController@store')->name('reservations.store');
 
 

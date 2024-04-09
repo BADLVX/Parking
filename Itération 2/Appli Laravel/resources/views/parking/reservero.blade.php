@@ -10,7 +10,7 @@
 <p>Reservation</p>
 
 
-<form classe = "bouton" method="get" action=""> 
+<form method="get" action=""> 
 <div class = "buttonposition">
     <button type="submit">Effectuer une réservation</button>
 </form>
