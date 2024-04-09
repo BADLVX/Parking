@@ -15,9 +15,10 @@ class Reservation extends Migration
     {
         Schema::create('reservations', function(Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('IdUser');
             $table->foreign('IdUser')->references('id')->on('users');
-            $table->integer('NumPlace');
-            $table->foreign('NumPlace')->references('id')->on('Places');
+            $table->foreignId('NumPlace');
+            $table->foreign('NumPlace')->references('id')->on('places');
             $table->date('DateFin');
             $table->date('DateAttribution');
         });
@@ -29,6 +30,6 @@ class Reservation extends Migration
      */
     public function down()
     {
-        Schema::drop('Reservations');
+        Schema::drop('reservations');
     }
 }
