@@ -30,7 +30,7 @@
                 display:flex;
                 justify-content: center;
                 align-items: center;
-                height: 100vh;
+            
         }
         button{
                     background-color: rgb(123, 123, 196);
@@ -40,6 +40,10 @@
         button:hover{
                    cursor:pointer;
         }
+        p, h1{
+            text-align:center;
+        }
+     
 </style>
 <div class = "container">
     @yield('content')

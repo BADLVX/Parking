@@ -10,8 +10,10 @@
 <p>Reservation</p>
 
 
-<form method="get" action=""> 
+<form classe = "bouton" method="get" action=""> 
+<div class = "buttonposition">
     <button type="submit">Effectuer une réservation</button>
 </form>
+</div>
 
 @endsection
