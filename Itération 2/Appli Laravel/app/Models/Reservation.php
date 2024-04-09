@@ -10,5 +10,6 @@ class Reservation extends Model
 
 //    protected $table = 'Reservations';
 //    protected $primaryKey = 'idReservation';
-    protected $fillable = ['datefin','datedebut'];
+       protected $fillable = ['datefin','datedebut'];
+
 }
