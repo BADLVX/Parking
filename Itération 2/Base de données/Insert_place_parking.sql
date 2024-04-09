@@ -30,3 +30,5 @@ INSERT INTO Place VALUES ( 28, "Vide");
 INSERT INTO Place VALUES ( 29, "Vide");
 INSERT INTO Place VALUES ( 30, "Vide");
 
+Avec un AUTO_INCREMENT, on utilise uniquement : 
+INSERT INTO Place VALUES ("Vide");

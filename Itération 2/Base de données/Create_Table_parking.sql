@@ -4,7 +4,7 @@ DROP TABLE IF EXISTS Place;
 
 
 CREATE TABLE Utilisateur(
-    IdUser INT,
+    IdUser INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
     NumPlaceAtt INT,
     MdpUser VARCHAR(50),
     NomUser VARCHAR(50),
@@ -15,7 +15,7 @@ CREATE TABLE Utilisateur(
 )ENGINE =INNODB;
 
 CREATE TABLE Reservation(
-    IdReservation INT,
+    IdReservation INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
     IdUser INT,
     NumPlace INT,
     DateFin DATE,
