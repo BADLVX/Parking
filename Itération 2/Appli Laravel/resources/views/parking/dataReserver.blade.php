@@ -17,7 +17,9 @@
     </div>
 
     <p>Merci d'avoir reservé ! </p>
-    <p>Votre numero de reservation est : 666 pov satan</p>
+    <p>Votre numero de reservation est : {{ $reservations->id }}</p>
+    <p>Date de début : {{ $reservations->DateAttribution->toDateString() }} </p>
+    <p>Date de fin : {{ $reservations->DateFin->toDateString() }} </p>
 
 
 

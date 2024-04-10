@@ -41,6 +41,9 @@ Route::get('/dataReserver', function () {
 });
 //Route::get('/reserver', 'ReservationController@store')->name('reservations.store');
 
+use App\Http\Controllers\ReservationsController;
+Route::post('/reservations/store', [ReservationsController::class, 'store'])->name('reservations.store');
+
 
 
 

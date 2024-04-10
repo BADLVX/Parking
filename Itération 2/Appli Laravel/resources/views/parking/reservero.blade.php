@@ -10,10 +10,11 @@
 <p>Reservation</p>
 
 
-<form method="get" action=""> 
+<form method="POST" action="{{ route('reservations.store') }}"> 
+    @csrf
 <div class = "buttonposition">
     <button type="submit">Effectuer une réservation</button>
-</form>
 </div>
+</form>
 
 @endsection
