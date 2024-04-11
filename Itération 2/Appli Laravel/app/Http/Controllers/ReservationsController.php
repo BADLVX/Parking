@@ -9,7 +9,7 @@ use Carbon\Carbon;
 class ReservationsController extends Controller
 {
     public function store(Request $request){
-        $IdUser = 1;
+        $IdUser = Auth::user()->id;
         $NumPlace = 1;
    
         $reservations = Reservations::create([
