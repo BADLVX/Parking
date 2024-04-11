@@ -1,17 +1,4 @@
 
-<style>
-   
-    form{
-        display:flex;
-        align-items:center;
-        justify-content:center;
-        flex-direction:column;
-    }
-    .forme{
-        margin-bottom:10px;
-    }
-</style>
-
 <x-guest-layout>
     <x-auth-card>
         <x-slot name="logo">
