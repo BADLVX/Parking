@@ -1,3 +1,5 @@
+
+
 <x-guest-layout>
     <x-auth-card>
         <x-slot name="logo">
@@ -8,7 +10,7 @@
 
         <!-- Validation Errors -->
         <x-auth-validation-errors class="mb-4" :errors="$errors" />
-
+   
         <form method="POST" action="{{ route('register') }}">
             @csrf
 
@@ -55,5 +57,6 @@
                 </x-button>
             </div>
         </form>
+
     </x-auth-card>
 </x-guest-layout>
