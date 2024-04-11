@@ -18,8 +18,10 @@ require __DIR__.'/auth.php';
 });*/
 
 Route::get('/', function () { // renvoie la vue apres l'authentification du middleware
-    return view('parking.accueil');
+    return view('parking.dashboard');
 })->middleware(['auth'])->name('dashboard'); //Authentification dans la vue dashboard
+
+
 
 Route::get('/accueil', function () {
     return view('parking.accueil');

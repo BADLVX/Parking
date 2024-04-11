@@ -13,6 +13,14 @@ class Place extends Model
     protected $fillable = [
         'StatutPlace',
     ];
+
+    public function rules()
+    {
+        return
+        [
+
+        ];
+    }
     // Gerer les timestamps (created at, updated at) on peux les activer ainsi
     //public $timestamps = true;
 }
