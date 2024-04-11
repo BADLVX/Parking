@@ -44,6 +44,9 @@ Route::get('/dataReserver', function () {
 use App\Http\Controllers\ReservationsController;
 Route::post('/reservations/store', [ReservationsController::class, 'store'])->name('reservations.store');
 
+use App\Http\Controllers\UserController;
+Route::get('/user-reservations', [UserController::class, 'getUserReservations']);
+
 
 
 

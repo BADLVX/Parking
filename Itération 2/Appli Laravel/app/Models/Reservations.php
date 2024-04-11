@@ -12,4 +12,10 @@ class Reservations extends Model
     protected $fillable = ['IdUser', 'NumPlace', 'DateFin','DateAttribution'];
 
     public $timestamps = false;
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'IdUser');
+    }
 }
+ 
