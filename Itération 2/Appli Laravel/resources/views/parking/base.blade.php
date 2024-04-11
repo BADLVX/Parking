@@ -43,7 +43,16 @@
         p, h1{
             text-align:center;
         }
-     
+     #retour{
+        display:flex;
+                justify-content: center;
+                align-items: center;
+                text-decoration:none;
+                color:#007bff;
+     }
+     #retour:hover{
+        color:black;
+     }
 </style>
 <div class = "container">
     @yield('content')

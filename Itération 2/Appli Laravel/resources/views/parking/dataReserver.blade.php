@@ -8,10 +8,10 @@
 
         <nav class = "FullNavigationBar">
 
-            <a href="accueil" id = "accueil">Accueil</a>
-            <a href="reservero" id = "reserver">Reserver</a>
-            <a href="etatreservation" id = "etatreservation">Etat Reservation</a>
-            <a href="anciennereservation" id = "anciennereservation">Ancienne Reservation</a>
+            <a href="{{ url()->previous() }}" id = "accueil">Accueil</a>
+            <a href="{{ url()->previous() }}" id = "reserver">Reserver</a>
+            <a href="{{ url()->previous() }}" id = "etatreservation">Etat Reservation</a>
+            <a href="{{ url()->previous() }}" id = "anciennereservation">Ancienne Reservation</a>
        </nav>
 
     </div>
@@ -21,7 +21,7 @@
     <p>Date de début : {{ $reservations->DateAttribution->toDateString() }} </p>
     <p>Date de fin : {{ $reservations->DateFin->toDateString() }} </p>
 
-
+<a id = "retour" href="{{ url()->previous() }}">Retour</a>
 
 </div>
 @endsection
