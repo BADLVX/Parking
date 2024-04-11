@@ -11,7 +11,7 @@ class UserController extends Controller
     public function getUserReservations()
     {
         $userReservations = User::with('reservations')->get();
-        return view('user-reservations', compact('userReservations'));
+        return view('parking.user-reservations', compact('userReservations'));
        // return $userReservations;
         //return response()->json($userReservations);
     }
