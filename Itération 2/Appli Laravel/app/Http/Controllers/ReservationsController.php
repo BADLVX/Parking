@@ -5,11 +5,13 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Reservations;
 use Carbon\Carbon;
+use Auth;
 
 class ReservationsController extends Controller
 {
     public function store(Request $request){
-        $IdUser = 1;
+
+        $IdUser = Auth::user()->id;
         $NumPlace = 1;
    
         $reservations = Reservations::create([
