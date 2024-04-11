@@ -1,3 +1,21 @@
+<style>
+
+form, div{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        flex-direction:column;
+        margin-bottom:10px;
+    }
+    button{
+        height: 50px;
+        width: 50px;
+    }
+   
+</style>
+
+
+<div class = "center">
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
@@ -15,3 +33,4 @@
         </div>
     </div>
 </x-app-layout>
+</div>

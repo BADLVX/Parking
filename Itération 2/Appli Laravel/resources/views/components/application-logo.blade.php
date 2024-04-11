@@ -1,14 +1,16 @@
 <style>
     svg{
 
-        width: 100px;
-        height: 100px;
+        width: 25px;
+        height: 25px;
     }
     .image{
         display:flex;
         align-items:center;
         justify-content:center;
         margin-bottom:20px;
+        width: 50px;
+        height: 50px;
     }
 </style>
 
