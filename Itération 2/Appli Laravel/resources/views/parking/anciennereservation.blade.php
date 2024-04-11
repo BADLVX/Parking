@@ -1,24 +1,53 @@
-@extends('parking.base')
-
-@section('content')
-<div class = "Container FadeInEffect">
-
-    <div class = "NavigationBarWrapper">
 
 
-        <nav class = "FullNavigationBar">
+<!-- user-reservations.blade.php -->
+<html>
+<head>
+    <title>Anciennes Réservations</title>
+<body>
+    <h1>Anciennes Réservations</h1>
+    <ul>
+ Id de l'utiliateur : {{$Iduser = Auth::user()->id}}
+        @foreach($userReservations as $user)
+            @if ( $Iduser == $user->id)
+            <li>
+                Les reservations de {{ $user->name }} sont: 
+                <ul>
+                    @foreach($user->reservations as $reservation)
 
-            <a href="accueil" id = "accueil">Accueil</a>
-            <a href="reservero" id = "reserver">Reserver</a>
-            <a href="etatreservation" id = "etatreservation">Etat Reservation</a>
-            <a href="anciennereservation" id = "anciennereservation">Ancienne Reservation</a>
-       </nav>
+                            <li>{{ $reservation->id }} - début : {{ $reservation->DateAttribution }} - fin :{{ $reservation->DateFin }} </li>
+                       
+                    @endforeach
+                </ul>
+            </li>
+            @endif
+        @endforeach
+    </ul>
+</body>
+</html>
 
-    </div>
-
-    <p>teste ancienne reservation</p>
 
 
+<!-- user-reservations.blade.php
 
-</div>
-@endsection
+afficher les reservations de tous les utilisateurs
+<html>
+<head>
+    <title>User Reservations</title>
+</head>
+<body>
+    <h1>User Reservations</h1>
+    <ul>
+        @foreach($userReservations as $user)
+            <li>
+                {{ $user->name }}'s reservations:
+                <ul>
+                    @foreach($user->reservations as $reservation)
+                        <li>{{ $reservation->id }} - {{ $reservation->date }}</li>
+                    @endforeach
+                </ul>
+            </li>
+        @endforeach
+    </ul>
+</body>
+</html> -->
