@@ -8,7 +8,8 @@ class Place extends Model
 {
     use HasFactory;
 
-    protected $table = 'Places';
+    public $timestamps = false;
+    protected $table = 'places';
     protected $primaryKey = 'Id';
     protected $fillable = [
         'StatutPlace',
