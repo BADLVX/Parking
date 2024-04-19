@@ -41,6 +41,10 @@ Route::get('/reservero', function () {
 Route::get('/dataReserver', function () {
     return view('parking.dataReserver');
 });
+
+Route::get('/place', function () {
+    return view('parking.place');
+});
 //Route::get('/reserver', 'ReservationController@store')->name('reservations.store');
 
 use App\Http\Controllers\ReservationsController;
@@ -48,6 +52,9 @@ Route::post('/reservations/store', [ReservationsController::class, 'store'])->na
 
 use App\Http\Controllers\UserController;
 Route::get('/anciennereservation', [UserController::class, 'getUserReservations'])->name('anciennereservation');
+
+use App\Http\Controllers\PlaceController;
+Route::post('/places/{id}/reserve', [PlaceController::class, 'reservePlace'])->name('places.reserve');
 
 
 

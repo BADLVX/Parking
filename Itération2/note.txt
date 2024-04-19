@@ -1,0 +1,4 @@
+Ajouter logout dans la barre de nav
+AJouter la barre de nav dans les pages : erreur et anciennereservations et dashboard
+Faire l'admin
+

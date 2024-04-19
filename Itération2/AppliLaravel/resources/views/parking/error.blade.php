@@ -8,5 +8,6 @@
     <h1>Erreur</h1>
     <p>{{ $errorMessage }}</p>
 
+
 </body>
 </html>
