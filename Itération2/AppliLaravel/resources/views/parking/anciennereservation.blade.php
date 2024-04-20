@@ -1,17 +1,51 @@
-
-
+@extends('parking.base')
+<style>
+    form, div{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        flex-direction:column;
+        margin-bottom:10px;
+    }
+    li{
+        margin-bottom:15px;
+    }
+    p{
+        margin-bottom:20px;
+    }
+</style>
 <!-- user-reservations.blade.php -->
 <html>
 <head>
     <title>Anciennes Réservations</title>
 <body>
+<div class = "Container FadeInEffect">
+    <div class = "NavigationBarWrapper">
+        <nav class = "FullNavigationBar">
+            <a href="accueil" id = "accueil">Accueil</a>
+            <a href="reservero" id = "reserver">Reserver</a>
+            <a href="etatreservation" id = "etatreservation">Etat Reservation</a>
+            <a href="anciennereservation" id = "anciennereservation">Ancienne Reservation</a>
+             <!-- Lien de déconnexion -->
+             <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <a class = "logout" href="{{ route('logout') }}" 
+                        onclick="event.preventDefault();
+                                this.closest('form').submit();">
+                        Déconnexion
+                    </a>
+                </form>
+       </nav>
+    </div>
+    <div>
+<div>
     <h1>Anciennes Réservations</h1>
-    <ul>
- Id de l'utiliateur : {{$Iduser = Auth::user()->id}}
+    
+ <p>Id de l'utiliateur : {{$Iduser = Auth::user()->id}}</p>
         @foreach($userReservations as $user)
             @if ( $Iduser == $user->id)
-            <li>
-                Les reservations de {{ $user->name }} sont: 
+            
+               <p> Les reservations de {{ $user->name }} sont: </p>
                 <ul>
                     @foreach($user->reservations as $reservation)
 
@@ -19,10 +53,11 @@
                        
                     @endforeach
                 </ul>
-            </li>
+           
             @endif
         @endforeach
-    </ul>
+   
+</div>
 </body>
 </html>
 

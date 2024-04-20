@@ -8,6 +8,24 @@
 </head>
 <body>
 <style>
+
+form, div{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        flex-direction:column;
+        margin-bottom:10px;
+        
+    }
+    .anciennereservation{
+margin-right{
+    margin-right:20px;
+}
+.FullNavigationBar .logout a {
+    color:red;
+}
+
+    }
     .FullNavigationBar {
         background-color: #333; /* Couleur de fond de la barre de navigation */
         overflow: hidden;
@@ -20,6 +38,7 @@
         text-align: center;
         padding: 14px 16px; /* Espacement autour du texte */
         text-decoration: none;
+       
     }
 
     .FullNavigationBar a:hover {

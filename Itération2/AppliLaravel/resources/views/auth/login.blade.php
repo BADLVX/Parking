@@ -1,4 +1,15 @@
 
+<style>
+    form, div{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        flex-direction:column;
+        margin-bottom:15px;
+    }
+
+</style>
+
 <x-guest-layout>
     <x-auth-card>
         <x-slot name="logo">
@@ -47,7 +58,8 @@
                         {{ __('Forgot your password?') }}
                     </a>
                 @endif
-
+                <br>
+                <a href="{{ route('register') }}">Inscription</a>
                 <x-button class="ml-3">
                     {{ __('Log in') }}
                 </x-button>

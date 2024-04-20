@@ -8,6 +8,8 @@
             <a href="reservero" id = "reserver">Reserver</a>
             <a href="etatreservation" id = "etatreservation">Etat Reservation</a>
             <a href="anciennereservation" id = "anciennereservation">Ancienne Reservation</a>
+
+           
        </nav>
     </div>
     <div>

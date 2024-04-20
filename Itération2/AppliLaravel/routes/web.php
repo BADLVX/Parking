@@ -24,8 +24,14 @@ Route::get('/', function () { // renvoie la vue apres l'authentification du midd
 
 
 Route::get('/accueil', function () {
-    return view('parking.accueil');
+    return view('parking.dashboard');
 });
+
+
+Route::get('/accueil', function () {
+    return view('parking.dashboard');
+});
+
 
 Route::get('/etatreservation', function () {
     return view('parking.etatreservation');
