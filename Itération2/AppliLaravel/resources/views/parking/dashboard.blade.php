@@ -23,9 +23,7 @@ form, div{
 
 </style>
 
-@extends('parking.base')
 
-@section('content')
 
 <div class = "Container FadeInEffect">
     <div class = "NavigationBarWrapper">
@@ -68,7 +66,7 @@ form, div{
 
 </x-app-layout> 
 </div>
-@endsection
+
 
 </x-app-layout>
 </div>
