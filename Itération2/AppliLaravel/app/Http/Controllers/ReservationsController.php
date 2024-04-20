@@ -43,7 +43,8 @@ class ReservationsController extends Controller
            // Mettre à jour le statut de la place de parking
          $availablePlace->update(['StatutPlace' => 'réservée']);
 
-        
+                 // Récupere l'état de la place
+         $reservedPlace = $reservation->place;
 
             // Retourner la vue avec les informations de réservation
             return view('parking.dataReserver', ['reservations' => $reservation, 'reservedPlace' => $reservedPlace]);                 
