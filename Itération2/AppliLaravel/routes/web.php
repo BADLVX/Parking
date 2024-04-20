@@ -27,12 +27,6 @@ Route::get('/accueil', function () {
     return view('parking.dashboard');
 });
 
-
-Route::get('/accueil', function () {
-    return view('parking.dashboard');
-});
-
-
 Route::get('/etatreservation', function () {
     return view('parking.etatreservation');
 });
