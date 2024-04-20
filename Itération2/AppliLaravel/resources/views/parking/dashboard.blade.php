@@ -1,6 +1,6 @@
 @extends('parking.base')
 
-
+@section('content')
 <style>
 
 form, div{
@@ -23,12 +23,8 @@ form, div{
 
 </style>
 
-
-
-
     <div>
         <h1 id = "bienvenue">Bienvenue sur Parking</h1>
-
 
 <div class = "center">
 <x-app-layout>
@@ -49,9 +45,8 @@ form, div{
 
 </x-app-layout> 
 </div>
+@endsection
 
 
-</x-app-layout>
-</div>
 
 
