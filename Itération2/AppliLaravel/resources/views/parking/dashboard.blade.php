@@ -1,3 +1,6 @@
+@extends('parking.base')
+
+@section('content')
 <style>
 
 form, div{
@@ -11,7 +14,7 @@ form, div{
         height: 50px;
         width: 50px;
     }
-   
+
 </style>
 
 
@@ -34,3 +37,4 @@ form, div{
     </div>
 </x-app-layout>
 </div>
+@endsection
