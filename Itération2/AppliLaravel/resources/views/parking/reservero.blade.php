@@ -1,8 +1,6 @@
 @extends('parking.base')
 @section('content')
 
-
-
 <p>Reservation</p>
 
 

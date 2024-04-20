@@ -1,27 +1,7 @@
 @extends('parking.base')
 
 @section('content')
-<style>
 
-form, div{
-        display:flex;
-        align-items:center;
-        justify-content:center;
-        flex-direction:column;
-        margin-bottom:10px;
-    }
-    button{
-        height: 50px;
-        width: 50px;
-    }
-
-   span{
-    color:red;
-   }
-
-
-
-</style>
 
     <div>
         <h1 id = "bienvenue">Bienvenue sur Parking</h1>

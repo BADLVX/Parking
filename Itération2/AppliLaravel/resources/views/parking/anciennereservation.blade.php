@@ -1,22 +1,5 @@
 @extends('parking.base')
 
-<style>
-    form, div{
-        display:flex;
-        align-items:center;
-        justify-content:center;
-        flex-direction:column;
-        margin-bottom:10px;
-    }
-    li{
-        margin-bottom:15px;
-    }
-    p{
-        margin-bottom:20px;
-    }
-</style>
-
-
 @section('content')
 
 <!-- user-reservations.blade.php -->
@@ -37,8 +20,6 @@
                <p> Les reservations de {{ $user->name }} sont: </p>
 
           
-              
-
                 <ul>
                     @foreach($user->reservations as $reservation)
 

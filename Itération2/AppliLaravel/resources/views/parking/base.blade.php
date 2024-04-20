@@ -51,11 +51,7 @@ margin-right{
                 align-items: center;
 
         }
-        button{
-                    background-color: rgb(123, 123, 196);
-                    width: 200px;
-                    height: 50px;
-        }
+ 
         button:hover{
                    cursor:pointer;
         }
@@ -63,7 +59,7 @@ margin-right{
             text-align:center;
         }
      #retour{
-        display:flex;
+                display:flex;
                 justify-content: center;
                 align-items: center;
                 text-decoration:none;
@@ -72,6 +68,34 @@ margin-right{
      #retour:hover{
         color:black;
      }
+     .elretour{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+     }
+     form, div{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        flex-direction:column;
+        margin-bottom:10px;
+    }
+    button{
+        background-color: rgb(123, 123, 196);
+        margin-top:20px;
+        height: 50px;
+        width: 200px;
+    }
+
+   span{
+    color:red;
+   }
+   li{
+        margin-bottom:15px;
+    }
+    p{
+        margin-bottom:20px;
+    }
 </style>
 <div class = "Container FadeInEffect">
     <div class = "NavigationBarWrapper">

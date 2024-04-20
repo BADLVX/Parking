@@ -1,31 +1,17 @@
 
-
-
-<!DOCTYPE html>
-
-<html>
-<head>
-    <title>Erreur</title>
-</head>
-<style>
-    form, div{
+  <style>
+    .elretour{
         display:flex;
-        align-items:center;
-        justify-content:center;
+            justify-content: center;
+            align-items: center;
+            justify-content:center;
         flex-direction:column;
-        margin-bottom:10px;
-       
     }
+    </style>
   
-</style>
-<body>
+  <div class = elretour>
+        <h1>Erreur</h1>
+        <p>{{ $errorMessage }}</p>
+        <a href="{{ url()->previous() }}" id = "retour">Retour</a>
+    </div>
 
-    
-   <div>
-    <h1>Erreur</h1>
-    <p>{{ $errorMessage }}</p>
-    <a href="{{ url()->previous() }}" id = "anciennereservation">Retour</a>
-</div>
-
-</body>
-</html>
