@@ -1,7 +1,7 @@
 @extends('parking.base')
 @section('content')
 
-<p>Reservation</p>
+<h1>Reservation</h1>
 
 
 <form method="POST" action="{{ route('reservations.store') }}">

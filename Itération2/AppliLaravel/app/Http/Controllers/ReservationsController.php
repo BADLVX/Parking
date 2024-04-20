@@ -43,13 +43,33 @@ class ReservationsController extends Controller
            // Mettre à jour le statut de la place de parking
          $availablePlace->update(['StatutPlace' => 'réservée']);
 
-            // Retourner la vue avec les informations de réservation
-            return view('parking.dataReserver', ['reservations' => $reservation]);
-        
-            
+                 // Récupere l'état de la place
+         $reservedPlace = $reservation->place;
 
-          
-    
+            // Retourner la vue avec les informations de réservation
+            return view('parking.dataReserver', ['reservations' => $reservation, 'reservedPlace' => $reservedPlace]);            
+        
+    }
+    public function showReservationStatus()
+    {
+        // Récupérer l'utilisateur connecté
+        $user = Auth::user();
+
+        // Récupérer la réservation de l'utilisateur s'il en a une
+        $reservation = $user->reservations()->first();
+
+        // Vérifier si l'utilisateur a une réservation
+        if (!$reservation) {
+            $errorMessage = "Vous n'avez pas de réservation active.";
+            return view('parking.error', compact('errorMessage'));
+        }
+
+        // Récupérer l'état de la place réservée
+        $reservedPlace = Place::find($reservation->NumPlace);
+        $reservationStatus = $reservedPlace->StatutPlace;
+
+        // Afficher l'état de la réservation dans une vue dédiée
+        return view('parking.etatreservation', compact('reservationStatus'));
     }
 }
 

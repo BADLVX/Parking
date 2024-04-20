@@ -57,5 +57,10 @@ use App\Http\Controllers\PlaceController;
 Route::post('/places/{id}/reserve', [PlaceController::class, 'reservePlace'])->name('places.reserve');
 
 
+Route::get('etatreservation', [ReservationsController::class, 'showReservationStatus'])->name('etatreservation');
+
+
+
+
 
 

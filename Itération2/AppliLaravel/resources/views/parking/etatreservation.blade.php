@@ -3,8 +3,8 @@
 @section('content')
 
 
-<p>teste etat reservation</p>
+<h1>etat reservation</h1>
 
-
+<p>Statut de la réservation : {{ $reservationStatus }}</p>
 
 @endsection
