@@ -2,6 +2,7 @@
 
 @section('content')
 <div class = "Container FadeInEffect">
+
     <div class = "NavigationBarWrapper">
         <nav class = "FullNavigationBar">
             <a href="accueil" id = "accueil">Accueil</a>
@@ -12,6 +13,7 @@
            
        </nav>
     </div>
+
     <div>
         <h1 id = "bienvenue">Bienvenue sur Parking</h1>
 @endsection

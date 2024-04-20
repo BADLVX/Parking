@@ -1,5 +1,6 @@
 @extends('parking.base')
 @section('content')
+
 <nav class = "FullNavigationBar">
 
     <a href="accueil" id = "accueil">Accueil</a>
@@ -16,10 +17,11 @@
                     </a>
                 </form>
 </nav>
+
 <p>Reservation</p>
 
 
-<form method="POST" action="{{ route('reservations.store') }}"> 
+<form method="POST" action="{{ route('reservations.store') }}">
     @csrf
 <div class = "buttonposition">
     <button type="submit">Effectuer une réservation</button>
