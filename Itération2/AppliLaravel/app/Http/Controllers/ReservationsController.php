@@ -28,10 +28,12 @@ class ReservationsController extends Controller
 
             // Vérifier si une place est disponible
             if (!$availablePlace) {
+                 // Mettre le statut de l'utilisateur en attente
+                $availablePlace->update(['StatutPlace' => 'En attente']);
                 $errorMessage = 'Désolé, aucune place de parking disponible pour le moment.';
                 return view('parking.error', compact('errorMessage'));
             }
-
+        
             // Créer une nouvelle réservation
             $reservation = Reservations::create([
                 'IdUser' => $user->id,
@@ -70,6 +72,8 @@ class ReservationsController extends Controller
         $reservedPlace = Place::find($reservation->NumPlace);
         $reservationStatus = $reservedPlace->StatutPlace;
 
+
+   
         // Afficher l'état de la réservation dans une vue dédiée
         return view('parking.etatreservation', compact('reservationStatus'));
     }
