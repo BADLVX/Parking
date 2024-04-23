@@ -103,7 +103,7 @@ margin-right{
             <a href="accueil" id = "accueil">Accueil</a>
             <a href="reservero" id = "reserver">Reserver</a>
             <a href="etatreservation" id = "etatreservation">Etat Reservation</a>
-            <a href="anciennereservation" id = "anciennereservation">Ancienne Reservation</a>
+            <a href="anciennereservation" id = "anciennereservation">Anciennes Réservations</a>
             <!-- Lien de déconnexion -->
             <form method="POST" action="{{ route('logout') }}">
                 @csrf

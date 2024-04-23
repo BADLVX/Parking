@@ -14,10 +14,10 @@ class InsertPlaces extends Seeder
      */
     public function run()
     {
-       // Place::create([
-        //    'id' => 1,
-        //    'StatutPlace' => "Libre"
-      //  ]);
+       Place::create([
+           'id' => 1,
+           'StatutPlace' => "Libre"
+       ]);
 
         Place::create([
             'id' => 2,
